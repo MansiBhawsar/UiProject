@@ -52,7 +52,12 @@ export default function Jobs() {
       // console.log(p);
 
   return(
-  <Card  key={i} style={{  lineSpacingMultiplier:'2.5'}}> 
+  <Card  key={i} style={{  lineSpacingMultiplier:'2.5',
+                           marginTop:0.0,
+                          //  backgroundColor:"white",
+                           borderWidth:0.1,
+                           borderRadius:0.5,
+                           }}> 
   <View style={{
     flexDirection:'row', 
     flexWrap:'wrap',
@@ -63,19 +68,19 @@ export default function Jobs() {
   source={{uri:"https://expertrons-v2.s3.ap-south-1.amazonaws.com/"+p.companyId.image}} 
   style={styles.setBorder}
      />
+
   <CardTitle 
     title={p.title} 
     subtitle="This is subtitle"
     titleStyle={styles.setFontSizeOne}
     subtitleStyle={styles.subtitle}
-    
-   />
-   </View>
+  />
+  </View>
    
   <CardContent  
- textStyle={styles.setContent}
-  text={p.location.map((l)=>{
-    return l.cityId.name
+     textStyle={styles.setContent}
+     text={p.location.map((l)=>{
+     return l.cityId.name
   }).join(",")}
 />
 <CardContent
@@ -97,42 +102,48 @@ export default function Jobs() {
 
 const styles = StyleSheet.create({
   container: {
-  marginTop:3,
+  backgroundColor:"white",
   },
 
   setBorder:{
-    borderRadius: 60,
-    position: 'absolute',
     marginLeft:20,
-    marginTop:28,
-    width:"15%",
-    height:"35%",
-    borderRadius:50,
-    borderColor: 'black'
-  },
+    marginTop:25,
+    width:"17%",
+    height:"40%",
+    borderWidth: 1,
+    borderRadius:5,
+    // shadowRadius:5
+    borderColor: 'white',
+    shadowRadius: 30,
+    shadowOpacity: 0.5,
+    shadowOffset: { height: 2},
+    shadowColor: "white",
+    position: 'absolute' ,
+    borderWidth:0.1
+    },
 
   setFontSizeOne:{
-    marginLeft:80,
+    marginLeft:100,
     marginTop:10,
     fontSize:16,
     fontWeight:"bold",
-    
+   
   },
   subtitle:{
-    marginLeft:80,
+    marginLeft:100,
     fontSize:12,
-    fontWeight: "bold"
-
-  },
+    fontWeight: "bold",
+    
+    },
 
   setContent:{
-    marginLeft:82,
+    marginLeft:100,
     fontSize:10,
     fontWeight:"300",
     
   },
   setskills:{
-    marginLeft:82,
+    marginLeft:100,
     fontSize:10,
     fontWeight:"300"
 
