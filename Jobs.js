@@ -38,6 +38,7 @@ export default function Jobs() {
     <SafeAreaView style={styles.container}>
       <ScrollView>
       <SearchBar 
+
       style={{
       backgroundColor:"white",
       }}
@@ -51,7 +52,7 @@ export default function Jobs() {
       // console.log(p);
 
   return(
-  <Card  key={i}> 
+  <Card  key={i} style={{  lineSpacingMultiplier:'2.5'}}> 
   <View style={{
     flexDirection:'row', 
     flexWrap:'wrap',
@@ -76,8 +77,15 @@ export default function Jobs() {
   text={p.location.map((l)=>{
     return l.cityId.name
   }).join(",")}
- 
-  />
+/>
+<CardContent
+ text={p.skills}
+ textStyle={styles.setskills}
+/>
+{/* <CardContent
+ text={p.appliedCount}
+ textStyle={styles.setskills}
+/> */}
   </Card>
  );
 })
@@ -107,7 +115,8 @@ const styles = StyleSheet.create({
     marginLeft:80,
     marginTop:10,
     fontSize:16,
-    fontWeight:"bold"
+    fontWeight:"bold",
+    
   },
   subtitle:{
     marginLeft:80,
@@ -119,7 +128,14 @@ const styles = StyleSheet.create({
   setContent:{
     marginLeft:82,
     fontSize:10,
+    fontWeight:"300",
+    
+  },
+  setskills:{
+    marginLeft:82,
+    fontSize:10,
     fontWeight:"300"
+
   }
 });
 
