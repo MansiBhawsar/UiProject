@@ -1,4 +1,3 @@
-
 import { SearchBar } from 'react-native-elements';
 import React,{useEffect,useState} from 'react';
 import { StyleSheet, Text, View,Image,SafeAreaView,ScrollView,Button,Footer,FooterTab,Icon} from 'react-native';
@@ -121,8 +120,6 @@ const styles = StyleSheet.create({
     marginLeft:82,
     fontSize:10,
     fontWeight:"300"
-    
-  
   }
 });
 
