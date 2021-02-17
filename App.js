@@ -2,9 +2,11 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { SearchBar } from 'react-native-elements';
 import React,{useEffect,useState} from 'react';
 import { StyleSheet, Text, View,Image,SafeAreaView,ScrollView,Button,Footer,FooterTab} from 'react-native';
-import { Card, CardTitle, CardContent, CardAction, CardButton, CardImage } from 'react-native-material-cards';
+import { Card, CardTitle, CardContent, CardAction, CardButton} from 'react-native-material-cards';
 import axios from 'axios';
 import Jobs from './Jobs';
+
+
 import { NavigationContainer } from '@react-navigation/native';
 // import Icon from 'react-native-vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
