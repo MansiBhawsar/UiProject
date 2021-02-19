@@ -1,7 +1,7 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { SearchBar } from 'react-native-elements';
 import React,{useEffect,useState} from 'react';
-import { StyleSheet, Text, View,Image,SafeAreaView,ScrollView,Button,Footer,FooterTab} from 'react-native';
+import { Text, View} from 'react-native';
 import { Card, CardTitle, CardContent, CardAction, CardButton} from 'react-native-material-cards';
 import axios from 'axios';
 import Jobs from './Jobs';
@@ -31,6 +31,7 @@ export default function App() {
   <NavigationContainer>
   <Tab.Navigator>
      < Tab.Screen  name="Home" options={{
+          
           tabBarLabel: 'Home',
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="home" color={color} size={size} />

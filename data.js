@@ -20,8 +20,7 @@ export default class CardImage extends Component {
     return (
       <View
         style={[styles.cardImage, newStyle]}
-        onLayout={e => this.setState({ calcHeight: e.nativeEvent.layout.width * 9 / 16 })}
-      >
+        onLayout={e => this.setState({ calcHeight: e.nativeEvent.layout.width * 9 / 16 })}>
         {this.props.source !== undefined && (
           <Image
             source={this.props.source}
